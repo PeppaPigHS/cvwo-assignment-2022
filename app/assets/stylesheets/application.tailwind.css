@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .min-h-screen-navbar {
+    min-height: calc(100vh - 65px);
+  }
+}

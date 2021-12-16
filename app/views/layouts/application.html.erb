@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Task Management App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href="/favicon.svg" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="theme-color" content="black" />
+    <meta property="og:title" content="Task Management App" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://task-peppapighs.herokuapp.com/" />
+    <meta name="description" content="Application to help you organize your tasks." />
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag "application" %>
+    <%= javascript_pack_tag 'Index' %>
+  </head>
+
+  <body>
+    <%= yield %>
+  </body>
+</html>
