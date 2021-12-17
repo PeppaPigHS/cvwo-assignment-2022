@@ -1,5 +1,5 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Welcome = () => {
   return (
@@ -35,7 +35,7 @@ const Welcome = () => {
         </main>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Welcome;
+export default Welcome

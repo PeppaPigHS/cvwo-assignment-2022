@@ -10,7 +10,7 @@ interface IUser {
   updated_at: string
 }
 
-interface IData {
+export interface IData {
   searchTitle: string
   searchDescription: string
   searchStatus: number

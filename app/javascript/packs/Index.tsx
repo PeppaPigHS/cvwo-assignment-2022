@@ -1,11 +1,11 @@
-import React from "react";
-import ReactDOM from "react-dom";
+import React from 'react'
+import ReactDOM from 'react-dom'
 
-import Home from "../components/Home";
+import Home from '../components/Home'
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener('DOMContentLoaded', () => {
   ReactDOM.render(
     <Home />,
-    document.body.appendChild(document.createElement("div"))
-  );
-});
+    document.body.appendChild(document.createElement('div'))
+  )
+})

@@ -1,5 +1,8 @@
 import React, { useState } from 'react'
 
+import { classNames } from '../utils/classNames'
+import { generateColor } from '../utils/task'
+
 interface ITagList {
   tagList: string[]
   setTagList: React.Dispatch<React.SetStateAction<string[]>>
@@ -46,13 +49,19 @@ const TagList = (props: ITagList) => {
         return (
           <span
             key={tag}
-            className="max-w-xs inline-flex rounded-full items-center py-0.5 pl-2.5 pr-1 text-sm font-medium bg-blue-100 text-blue-700"
+            className={classNames(
+              'max-w-xs inline-flex rounded-full items-center py-0.5 pl-2.5 pr-1 text-sm font-medium',
+              generateColor(tag).color
+            )}
           >
             <p className="truncate">{tag}</p>
             <button
               type="button"
               onClick={() => handleDelete(tag)}
-              className="flex-shrink-0 ml-0.5 h-4 w-4 rounded-full inline-flex items-center justify-center text-blue-400 hover:bg-blue-200 hover:text-blue-500 focus:outline-none focus:bg-blue-500 focus:text-white"
+              className={classNames(
+                'flex-shrink-0 ml-0.5 h-4 w-4 rounded-full inline-flex items-center justify-center text-blue-400 hover:bg-blue-200 hover:text-blue-500 focus:outline-none focus:bg-blue-500 focus:text-white',
+                generateColor(tag).crossColor
+              )}
             >
               <span className="sr-only">Remove tag</span>
               <svg

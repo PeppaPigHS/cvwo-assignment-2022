@@ -188,7 +188,7 @@ const EditTask = () => {
                       <label className="block text-sm font-medium text-gray-700">
                         Status
                       </label>
-                      <div className="mt-1 sm:mt-0 sm:col-span-2">
+                      <div className="mt-1 sm:mt-0">
                         <Choice
                           choice={['Pending', 'Done']}
                           id={[0, 1]}
@@ -204,7 +204,7 @@ const EditTask = () => {
                       <label className="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
                         Tags
                       </label>
-                      <div className="mt-1 sm:mt-0">
+                      <div className="mt-1 sm:mt-0 sm:col-span-2">
                         <TagList
                           tagList={task.tags}
                           setTagList={(tags: string[]) => {

@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { ChevronRightIcon, PlusSmIcon } from '@heroicons/react/solid'
+import { RefreshIcon } from '@heroicons/react/outline'
 
 import SearchMenu from './SearchMenu'
-import { useUser } from './UserContext'
-import { searchTask } from '../utils/task'
-import { RefreshIcon } from '@heroicons/react/outline'
+import { generateColor } from '../utils/task'
+import { classNames } from '../utils/classNames'
 
 export interface ITask {
   id: number
@@ -16,17 +16,8 @@ export interface ITask {
 }
 
 const TaskTable = () => {
-  const { user } = useUser()
-
   const [loading, setLoading] = useState<boolean>(true)
   const [tasks, setTasks] = useState<ITask[]>([])
-
-  useEffect(() => {
-    searchTask(user, {
-      setLoading: setLoading,
-      setTasks: setTasks,
-    })
-  }, [])
 
   return (
     <div className="flex-grow bg-gray-50">
@@ -70,12 +61,15 @@ const TaskTable = () => {
                             {task.description}
                           </p>
                         </div>
-                        <div className="mt-4 flex-shrink-0 sm:mt-0 sm:ml-5 sm:max-w-xs sm:w-full">
-                          <div className="flex overflow-x-auto gap-x-2 sm:flex-wrap sm:gap-y-2">
+                        <div className="mt-4 flex-shrink-0 sm:mt-0 sm:ml-5 sm:max-w-xs">
+                          <div className="flex justify-end overflow-x-auto gap-x-2 sm:flex-wrap sm:gap-y-2">
                             {task.tags.map((tag) => (
                               <span
                                 key={tag}
-                                className="max-w-xs inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium bg-blue-100 text-blue-800"
+                                className={classNames(
+                                  'max-w-xs inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium',
+                                  generateColor(tag).color
+                                )}
                               >
                                 <p className="truncate">{tag}</p>
                               </span>

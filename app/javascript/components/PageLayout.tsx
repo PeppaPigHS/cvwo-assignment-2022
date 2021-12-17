@@ -1,10 +1,10 @@
-import React from "react";
+import React from 'react'
 
-import Navbar from "./Navbar";
-import Footer from "./Footer";
+import Navbar from './Navbar'
+import Footer from './Footer'
 
 interface IPageLayout {
-  children: React.ReactNode;
+  children: React.ReactNode
 }
 
 const PageLayout = (props: IPageLayout) => {
@@ -16,7 +16,7 @@ const PageLayout = (props: IPageLayout) => {
       </main>
       <Footer />
     </div>
-  );
-};
+  )
+}
 
-export default PageLayout;
+export default PageLayout
