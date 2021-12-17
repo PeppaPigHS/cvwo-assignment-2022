@@ -90,11 +90,11 @@ const TaskTable = () => {
             )}
           </ul>
         </div>
-        <div className="sticky bottom-0 px-5 py-5 flex justify-end sm:px-8">
+        <div className="pointer-events-none sticky bottom-0 px-5 py-5 flex justify-end sm:px-8">
           <Link
             to="/new"
             type="button"
-            className="inline-flex items-center px-3 py-3 border border-transparent shadow-lg text-base font-medium rounded-full text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 sm:px-6"
+            className="pointer-events-auto inline-flex items-center px-3 py-3 border border-transparent shadow-lg text-base font-medium rounded-full text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 sm:px-6"
           >
             <PlusSmIcon
               className="h-6 w-6 sm:-ml-1 sm:mr-3"
