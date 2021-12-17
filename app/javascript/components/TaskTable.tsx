@@ -62,7 +62,7 @@ const TaskTable = () => {
                           </p>
                         </div>
                         <div className="mt-4 flex-shrink-0 sm:mt-0 sm:ml-5 sm:max-w-xs">
-                          <div className="flex justify-end overflow-x-auto gap-x-2 sm:flex-wrap sm:gap-y-2">
+                          <div className="flex overflow-x-auto gap-x-2 sm:flex-wrap sm:gap-y-2 sm:justify-end">
                             {task.tags.map((tag) => (
                               <span
                                 key={tag}

@@ -1,16 +1,16 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { ClipboardListIcon } from '@heroicons/react/outline'
+import { ClipboardListIcon, RefreshIcon } from '@heroicons/react/outline'
 
 import { useUser } from './UserContext'
 import { handleLogout } from '../utils/auth'
 
 const Navbar = () => {
-  const { user, userDispatch } = useUser()
+  const { user, loading, userDispatch } = useUser()
 
   return (
     <nav className="bg-white border-b border-gray-200">
-      <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative flex items-center justify-between h-16">
           <div className="flex-1 flex items-stretch justify-between">
             <div className="flex-shrink-0 flex items-center">
@@ -30,7 +30,14 @@ const Navbar = () => {
               </Link>
             </div>
 
-            {user.user !== null ? (
+            {loading ? (
+              <div className="flex items-center text-gray-400">
+                <RefreshIcon
+                  className="animate-spin h-6 w-6"
+                  aria-hidden="true"
+                />
+              </div>
+            ) : user.user !== null ? (
               <div className="flex items-center gap-3">
                 <span className="hidden max-w-xs overflow-hidden flex whitespace-nowrap sm:block">
                   Welcome,{' '}
