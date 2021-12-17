@@ -21,13 +21,16 @@ export const handleLogout = (userDispatch: React.Dispatch<UserAction>) => {
         type: 'RECEIVE_CONTEXT',
         payload: initialState.user,
       })
-      userDispatch({
-        type: 'LOADING_DONE',
-      })
     } else {
       alert('Could not log out. Please try again later.')
     }
+    userDispatch({
+      type: 'LOADING_DONE',
+    })
   }
 
+  userDispatch({
+    type: 'LOADING_START',
+  })
   postDeleteSession()
 }
