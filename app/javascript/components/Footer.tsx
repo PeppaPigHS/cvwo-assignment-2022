@@ -10,7 +10,7 @@ const Footer = () => {
         <span className="text-xs text-gray-400 md:justify-start">
           The source code for this website is available on{' '}
           <a
-            href="https://github.com/PeppaPigHS/cvwo-assignment"
+            href="https://github.com/PeppaPigHS/cvwo-assignment-2022"
             target="_blank"
             className="inline-flex font-medium text-gray-700 hover:underline"
           >
