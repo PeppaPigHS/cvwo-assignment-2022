@@ -115,7 +115,7 @@ The navigation bar contains links such as Sign up, Sign in, or Sign out, dependi
 * Click "Add Task" (or the button with "+" sign for mobile user) at the bottom right corner of the screen or head over to this [link](https://task-peppapighs.herokuapp.com/new).
 * Fill in the task details until satisfied.
 * You may choose to save, or cancel.
-* If you choose to save, the app will redirect you the home page with your new task in the table.
+* If you choose to save, the app will redirect you to the home page with your new task in the table.
 
 #### Viewing, Editing, and Deleting Task
 
