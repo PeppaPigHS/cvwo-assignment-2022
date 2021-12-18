@@ -105,7 +105,7 @@ The navigation bar contains links such as Sign up, Sign in, or Sign out, dependi
 
 #### Existing Users
 
-* Head over to sign in page [here](https://task-peppapighs.herokuapp.com/signin).
+* Head over to the sign-in page [here](https://task-peppapighs.herokuapp.com/signin).
 * Once signed in, the app will automatically redirect you to the home page.
 
 ### Managing Tasks
